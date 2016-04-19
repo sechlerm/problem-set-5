@@ -1,0 +1,33 @@
+#! usr/bin/env python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#problem 2- parse a FQ file. if you open file and go over line by line. line1 = name, 2 = sequence 3= empty line and 4 = quality scores. use the modulo % to keep track of which line/ record you are on,
+
+filename = '/Users/marybethsechler/Desktop/GAW/data-sets/fastq/SP1.fq'
+line_num = 0
+
+for line in open(filename):
+line_type = line_num % 4
+
+if line_type == 0:
+    name = line.strip()
+elif line_type == 1
+  seq = line.strip()
+elif line_type == 3
+    quals = line.strip()
+print line_type, line.strip
+
+line_num += 1

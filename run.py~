@@ -1,0 +1,46 @@
+#! usr/bin/env python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#problem 2- parse a FQ file. if you open file and go over line by line. line1 = name, 2 = sequence 3= empty line and 4 = quality scores. use the modulo % to keep track of which line/ record you are on,
+
+filename = '/Users/marybethsechler/Desktop/GAW/data-sets/fastq/SP1.fq'
+line_num = 0
+num_records = 0
+for line in open(filename):
+line_type = line_num % 4
+
+if line_type == 0:
+    name = line.strip()
+elif line_type == 1
+  seq = line.strip()
+elif line_type == 3
+    quals = line.strip()
+print line_type, line.strip
+
+line_num += 1
+num_records += 1
+
+#another useful counter- from collections import Counter, if seq = CACTGCATGCATGC then Counter(seq) will output the number of each character. to get the number out counts = Counter(seq), then call counts['C'] and it will output the number
+
+#ord('a'), ordinal value ord returns integer value of a one character string. build a function that takes on input a string of characters, evaluates the ordinal value of each character and then 
+
+
+def sum_quals(qual):
+sum = 0
+
+for char in qual:
+sum += ord(char)
+return sum
